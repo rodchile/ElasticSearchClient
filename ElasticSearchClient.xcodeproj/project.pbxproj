@@ -83,10 +83,10 @@
 		A78F72CD15347B2F00A6D93C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A78F72CF15347B2F00A6D93C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A78F72D115347B2F00A6D93C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A78F72D515347B2F00A6D93C /* ElasticSearchClient-Info.plist */ = {isa = PBXFileReference; path = "ElasticSearchClient-Info.plist"; sourceTree = "<group>"; };
+		A78F72D515347B2F00A6D93C /* ElasticSearchClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ElasticSearchClient-Info.plist"; sourceTree = "<group>"; };
 		A78F72D715347B2F00A6D93C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A78F72D915347B2F00A6D93C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A78F72DB15347B2F00A6D93C /* ElasticSearchClient-Prefix.pch */ = {isa = PBXFileReference; path = "ElasticSearchClient-Prefix.pch"; sourceTree = "<group>"; };
+		A78F72DB15347B2F00A6D93C /* ElasticSearchClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ElasticSearchClient-Prefix.pch"; sourceTree = "<group>"; };
 		A78F72DC15347B2F00A6D93C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A78F72DD15347B2F00A6D93C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A78F72DF15347B2F00A6D93C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				A78F735915347F2900A6D93C /* RestKit.xcodeproj */,
-				A78F72D315347B2F00A6D93C /* Example */,
+				A78F72D315347B2F00A6D93C /* ElasticSearchClient */,
 				A78F72CC15347B2E00A6D93C /* Frameworks */,
 				A78F72CA15347B2E00A6D93C /* Products */,
 			);
@@ -174,7 +174,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A78F72D315347B2F00A6D93C /* Example */ = {
+		A78F72D315347B2F00A6D93C /* ElasticSearchClient */ = {
 			isa = PBXGroup;
 			children = (
 				A78F72DC15347B2F00A6D93C /* AppDelegate.h */,
@@ -186,6 +186,7 @@
 				A78F738D1534866E00A6D93C /* response */,
 				A78F72D415347B2F00A6D93C /* Supporting Files */,
 			);
+			name = ElasticSearchClient;
 			path = Example;
 			sourceTree = "<group>";
 		};
