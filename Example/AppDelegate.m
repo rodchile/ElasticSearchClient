@@ -22,18 +22,28 @@
 {
     RKLogConfigureByName("RestKit/Network*", RKLogLevelTrace);
     RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
-    
+
+    NSString *path = [[NSBundle mainBundle] bundlePath];
+    NSString *finalPath = [path stringByAppendingPathComponent:@"config.plist"];
+    NSDictionary *plistData = [NSDictionary dictionaryWithContentsOfFile:finalPath];
+
     // Initialize RestKit
     RKObjectManager *manager =
     [RKObjectManager objectManagerWithBaseURL:
-     [NSURL URLWithString:@"http://107.21.233.125:9200"]];
-    
+     [
+      NSURL URLWithString:[NSString stringWithFormat:@"%@://%@:%@",
+                           [plistData objectForKey:@"protocol"],
+                           [plistData objectForKey:@"address"],
+                           [plistData objectForKey:@"port"]]
+     ]
+    ];
+
     // Enable automatic network activity indicator management
     manager.client.requestQueue.showsNetworkActivityIndicatorWhenBusy = YES;
-    
+
     // Serialize to JSON on the wire
     manager.serializationMIMEType = RKMIMETypeJSON;
-    
+
     [RKObjectManager setSharedManager:manager];
 }
 

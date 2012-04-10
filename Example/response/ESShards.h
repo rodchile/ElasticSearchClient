@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RestKit/RestKit.h"
 
 @interface ESShards : NSObject
+
+@property (nonatomic, strong) NSNumber* total;
+@property (nonatomic, strong) NSNumber* successful;
+@property (nonatomic, strong) NSNumber* failed;
+
++ (RKObjectMapping *) getObjectMapping;
 
 @end

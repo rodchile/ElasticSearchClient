@@ -10,6 +10,11 @@
 #import <RestKit/RestKit.h>
 
 @interface ViewController : UIViewController <RKObjectLoaderDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *protocol;
+@property (weak, nonatomic) IBOutlet UILabel *address;
+@property (weak, nonatomic) IBOutlet UILabel *port;
+@property (weak, nonatomic) IBOutlet UITextView *request;
+@property (weak, nonatomic) IBOutlet UITextView *response;
 
 - (void) runTests;
 

@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RestKit/RestKit.h>
 
-@interface ESHits : NSObject
+@interface ESHit : NSObject
+
+@property (nonatomic, strong) NSString*         index;
+@property (nonatomic, strong) NSString*         type;
+@property (nonatomic, strong) NSString*         identifier;
+@property (nonatomic, strong) NSDecimalNumber*  score;
+@property (nonatomic, strong) NSDictionary*     fields;
+
++ (RKObjectMapping *) getObjectMapping;
 
 @end
