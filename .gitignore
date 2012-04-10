@@ -2,3 +2,4 @@
 ElasticSearchClient.xcodeproj/xcuserdata/*
 ElasticSearchClient.xcodeproj/project.xcworkspace/xcuserdata/*
 DerivedData/*
+ElasticSearchClient/config.plist
