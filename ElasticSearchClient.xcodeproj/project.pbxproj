@@ -79,14 +79,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A78F72C915347B2E00A6D93C /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A78F72C915347B2E00A6D93C /* ElasticSearchClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElasticSearchClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A78F72CD15347B2F00A6D93C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A78F72CF15347B2F00A6D93C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A78F72D115347B2F00A6D93C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A78F72D515347B2F00A6D93C /* Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; sourceTree = "<group>"; };
+		A78F72D515347B2F00A6D93C /* ElasticSearchClient-Info.plist */ = {isa = PBXFileReference; path = "ElasticSearchClient-Info.plist"; sourceTree = "<group>"; };
 		A78F72D715347B2F00A6D93C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A78F72D915347B2F00A6D93C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A78F72DB15347B2F00A6D93C /* Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Example-Prefix.pch"; sourceTree = "<group>"; };
+		A78F72DB15347B2F00A6D93C /* ElasticSearchClient-Prefix.pch */ = {isa = PBXFileReference; path = "ElasticSearchClient-Prefix.pch"; sourceTree = "<group>"; };
 		A78F72DC15347B2F00A6D93C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A78F72DD15347B2F00A6D93C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A78F72DF15347B2F00A6D93C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		A78F72CA15347B2E00A6D93C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A78F72C915347B2E00A6D93C /* Example.app */,
+				A78F72C915347B2E00A6D93C /* ElasticSearchClient.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,10 +192,10 @@
 		A78F72D415347B2F00A6D93C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A78F72D515347B2F00A6D93C /* Example-Info.plist */,
+				A78F72D515347B2F00A6D93C /* ElasticSearchClient-Info.plist */,
 				A78F72D615347B2F00A6D93C /* InfoPlist.strings */,
 				A78F72D915347B2F00A6D93C /* main.m */,
-				A78F72DB15347B2F00A6D93C /* Example-Prefix.pch */,
+				A78F72DB15347B2F00A6D93C /* ElasticSearchClient-Prefix.pch */,
 				A7A946B71534CCAA0025ED7A /* config.plist */,
 			);
 			name = "Supporting Files";
@@ -244,9 +244,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A78F72C815347B2E00A6D93C /* Example */ = {
+		A78F72C815347B2E00A6D93C /* ElasticSearchClient */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A78F72E715347B2F00A6D93C /* Build configuration list for PBXNativeTarget "Example" */;
+			buildConfigurationList = A78F72E715347B2F00A6D93C /* Build configuration list for PBXNativeTarget "ElasticSearchClient" */;
 			buildPhases = (
 				A78F72C515347B2E00A6D93C /* Sources */,
 				A78F72C615347B2E00A6D93C /* Frameworks */,
@@ -257,9 +257,9 @@
 			dependencies = (
 				A78F736F1534801200A6D93C /* PBXTargetDependency */,
 			);
-			name = Example;
+			name = ElasticSearchClient;
 			productName = Example;
-			productReference = A78F72C915347B2E00A6D93C /* Example.app */;
+			productReference = A78F72C915347B2E00A6D93C /* ElasticSearchClient.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -270,7 +270,7 @@
 			attributes = {
 				LastUpgradeCheck = 0430;
 			};
-			buildConfigurationList = A78F72C315347B2E00A6D93C /* Build configuration list for PBXProject "Example" */;
+			buildConfigurationList = A78F72C315347B2E00A6D93C /* Build configuration list for PBXProject "ElasticSearchClient" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -288,7 +288,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				A78F72C815347B2E00A6D93C /* Example */,
+				A78F72C815347B2E00A6D93C /* ElasticSearchClient */,
 			);
 		};
 /* End PBXProject section */
@@ -441,14 +441,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Example/Example-Prefix.pch";
+				GCC_PREFIX_HEADER = "Example/ElasticSearchClient-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
-				INFOPLIST_FILE = "Example/Example-Info.plist";
+				INFOPLIST_FILE = "Example/ElasticSearchClient-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ElasticSearchClient;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -457,14 +457,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Example/Example-Prefix.pch";
+				GCC_PREFIX_HEADER = "Example/ElasticSearchClient-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
-				INFOPLIST_FILE = "Example/Example-Info.plist";
+				INFOPLIST_FILE = "Example/ElasticSearchClient-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ElasticSearchClient;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -472,7 +472,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A78F72C315347B2E00A6D93C /* Build configuration list for PBXProject "Example" */ = {
+		A78F72C315347B2E00A6D93C /* Build configuration list for PBXProject "ElasticSearchClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A78F72E515347B2F00A6D93C /* Debug */,
@@ -481,7 +481,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A78F72E715347B2F00A6D93C /* Build configuration list for PBXNativeTarget "Example" */ = {
+		A78F72E715347B2F00A6D93C /* Build configuration list for PBXNativeTarget "ElasticSearchClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A78F72E815347B2F00A6D93C /* Debug */,
