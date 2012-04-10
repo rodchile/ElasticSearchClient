@@ -20,7 +20,6 @@
 		A78F737E1534809700A6D93C /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A78F737D1534809700A6D93C /* libxml2.dylib */; };
 		A7A946F01534D98E0025ED7A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A946D51534D98E0025ED7A /* AppDelegate.m */; };
 		A7A946F11534D98E0025ED7A /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7A946D61534D98E0025ED7A /* config.plist */; };
-		A7A946F21534D98E0025ED7A /* ElasticSearchClient-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7A946D71534D98E0025ED7A /* ElasticSearchClient-Info.plist */; };
 		A7A946F31534D98E0025ED7A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7A946D91534D98E0025ED7A /* InfoPlist.strings */; };
 		A7A946F41534D98E0025ED7A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7A946DB1534D98E0025ED7A /* ViewController.xib */; };
 		A7A946F51534D98E0025ED7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A946DD1534D98E0025ED7A /* main.m */; };
@@ -339,7 +338,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7A946F11534D98E0025ED7A /* config.plist in Resources */,
-				A7A946F21534D98E0025ED7A /* ElasticSearchClient-Info.plist in Resources */,
 				A7A946F31534D98E0025ED7A /* InfoPlist.strings in Resources */,
 				A7A946F41534D98E0025ED7A /* ViewController.xib in Resources */,
 			);
