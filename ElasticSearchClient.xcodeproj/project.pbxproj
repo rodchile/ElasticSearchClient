@@ -10,11 +10,6 @@
 		A78F72CE15347B2F00A6D93C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78F72CD15347B2F00A6D93C /* UIKit.framework */; };
 		A78F72D015347B2F00A6D93C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78F72CF15347B2F00A6D93C /* Foundation.framework */; };
 		A78F72D215347B2F00A6D93C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78F72D115347B2F00A6D93C /* CoreGraphics.framework */; };
-		A78F72D815347B2F00A6D93C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A78F72D615347B2F00A6D93C /* InfoPlist.strings */; };
-		A78F72DA15347B2F00A6D93C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F72D915347B2F00A6D93C /* main.m */; };
-		A78F72DE15347B2F00A6D93C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F72DD15347B2F00A6D93C /* AppDelegate.m */; };
-		A78F72E115347B2F00A6D93C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F72E015347B2F00A6D93C /* ViewController.m */; };
-		A78F72E415347B2F00A6D93C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78F72E215347B2F00A6D93C /* ViewController.xib */; };
 		A78F73701534801C00A6D93C /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A78F736515347F2A00A6D93C /* libRestKit.a */; };
 		A78F73721534806300A6D93C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78F73711534806300A6D93C /* CFNetwork.framework */; };
 		A78F73741534806F00A6D93C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78F73731534806E00A6D93C /* CoreData.framework */; };
@@ -23,14 +18,20 @@
 		A78F737A1534808400A6D93C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78F73791534808400A6D93C /* SystemConfiguration.framework */; };
 		A78F737C1534808D00A6D93C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78F737B1534808D00A6D93C /* QuartzCore.framework */; };
 		A78F737E1534809700A6D93C /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A78F737D1534809700A6D93C /* libxml2.dylib */; };
-		A78F738A153485CB00A6D93C /* ESBody.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F7385153485CB00A6D93C /* ESBody.m */; };
-		A78F738B153485CB00A6D93C /* ESQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F7387153485CB00A6D93C /* ESQuery.m */; };
-		A78F738C153485CB00A6D93C /* ESQueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F7389153485CB00A6D93C /* ESQueryString.m */; };
-		A78F7390153486BF00A6D93C /* ESResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F738F153486BF00A6D93C /* ESResponse.m */; };
-		A78F7393153487FF00A6D93C /* ESShards.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F7392153487FF00A6D93C /* ESShards.m */; };
-		A78F73961534884900A6D93C /* ESHitMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F73951534884900A6D93C /* ESHitMetrics.m */; };
-		A78F7399153488C200A6D93C /* ESHit.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F7398153488C200A6D93C /* ESHit.m */; };
-		A7A946B81534CCAA0025ED7A /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7A946B71534CCAA0025ED7A /* config.plist */; };
+		A7A946F01534D98E0025ED7A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A946D51534D98E0025ED7A /* AppDelegate.m */; };
+		A7A946F11534D98E0025ED7A /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7A946D61534D98E0025ED7A /* config.plist */; };
+		A7A946F21534D98E0025ED7A /* ElasticSearchClient-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7A946D71534D98E0025ED7A /* ElasticSearchClient-Info.plist */; };
+		A7A946F31534D98E0025ED7A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7A946D91534D98E0025ED7A /* InfoPlist.strings */; };
+		A7A946F41534D98E0025ED7A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7A946DB1534D98E0025ED7A /* ViewController.xib */; };
+		A7A946F51534D98E0025ED7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A946DD1534D98E0025ED7A /* main.m */; };
+		A7A946F61534D98E0025ED7A /* ESBody.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A946E01534D98E0025ED7A /* ESBody.m */; };
+		A7A946F71534D98E0025ED7A /* ESQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A946E21534D98E0025ED7A /* ESQuery.m */; };
+		A7A946F81534D98E0025ED7A /* ESQueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A946E41534D98E0025ED7A /* ESQueryString.m */; };
+		A7A946F91534D98E0025ED7A /* ESHit.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A946E71534D98E0025ED7A /* ESHit.m */; };
+		A7A946FA1534D98E0025ED7A /* ESHitMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A946E91534D98E0025ED7A /* ESHitMetrics.m */; };
+		A7A946FB1534D98E0025ED7A /* ESResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A946EB1534D98E0025ED7A /* ESResponse.m */; };
+		A7A946FC1534D98E0025ED7A /* ESShards.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A946ED1534D98E0025ED7A /* ESShards.m */; };
+		A7A946FD1534D98E0025ED7A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A946EF1534D98E0025ED7A /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,15 +84,6 @@
 		A78F72CD15347B2F00A6D93C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A78F72CF15347B2F00A6D93C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A78F72D115347B2F00A6D93C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A78F72D515347B2F00A6D93C /* ElasticSearchClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ElasticSearchClient-Info.plist"; sourceTree = "<group>"; };
-		A78F72D715347B2F00A6D93C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A78F72D915347B2F00A6D93C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A78F72DB15347B2F00A6D93C /* ElasticSearchClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ElasticSearchClient-Prefix.pch"; sourceTree = "<group>"; };
-		A78F72DC15347B2F00A6D93C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A78F72DD15347B2F00A6D93C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A78F72DF15347B2F00A6D93C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A78F72E015347B2F00A6D93C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A78F72E315347B2F00A6D93C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		A78F735915347F2900A6D93C /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		A78F73711534806300A6D93C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		A78F73731534806E00A6D93C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -100,21 +92,30 @@
 		A78F73791534808400A6D93C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A78F737B1534808D00A6D93C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A78F737D1534809700A6D93C /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		A78F7384153485CB00A6D93C /* ESBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESBody.h; sourceTree = "<group>"; };
-		A78F7385153485CB00A6D93C /* ESBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESBody.m; sourceTree = "<group>"; };
-		A78F7386153485CB00A6D93C /* ESQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESQuery.h; sourceTree = "<group>"; };
-		A78F7387153485CB00A6D93C /* ESQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESQuery.m; sourceTree = "<group>"; };
-		A78F7388153485CB00A6D93C /* ESQueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESQueryString.h; sourceTree = "<group>"; };
-		A78F7389153485CB00A6D93C /* ESQueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESQueryString.m; sourceTree = "<group>"; };
-		A78F738E153486BF00A6D93C /* ESResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESResponse.h; sourceTree = "<group>"; };
-		A78F738F153486BF00A6D93C /* ESResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESResponse.m; sourceTree = "<group>"; };
-		A78F7391153487FF00A6D93C /* ESShards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESShards.h; sourceTree = "<group>"; };
-		A78F7392153487FF00A6D93C /* ESShards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESShards.m; sourceTree = "<group>"; };
-		A78F73941534884900A6D93C /* ESHitMetrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESHitMetrics.h; sourceTree = "<group>"; };
-		A78F73951534884900A6D93C /* ESHitMetrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESHitMetrics.m; sourceTree = "<group>"; };
-		A78F7397153488C200A6D93C /* ESHit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESHit.h; sourceTree = "<group>"; };
-		A78F7398153488C200A6D93C /* ESHit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESHit.m; sourceTree = "<group>"; };
-		A7A946B71534CCAA0025ED7A /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
+		A7A946D41534D98E0025ED7A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A7A946D51534D98E0025ED7A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A7A946D61534D98E0025ED7A /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = config.plist; path = ElasticSearchClient/config.plist; sourceTree = "<group>"; };
+		A7A946D71534D98E0025ED7A /* ElasticSearchClient-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ElasticSearchClient-Info.plist"; path = "ElasticSearchClient/ElasticSearchClient-Info.plist"; sourceTree = "<group>"; };
+		A7A946D81534D98E0025ED7A /* ElasticSearchClient-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ElasticSearchClient-Prefix.pch"; path = "ElasticSearchClient/ElasticSearchClient-Prefix.pch"; sourceTree = "<group>"; };
+		A7A946DA1534D98E0025ED7A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A7A946DC1534D98E0025ED7A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		A7A946DD1534D98E0025ED7A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ElasticSearchClient/main.m; sourceTree = "<group>"; };
+		A7A946DF1534D98E0025ED7A /* ESBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESBody.h; sourceTree = "<group>"; };
+		A7A946E01534D98E0025ED7A /* ESBody.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESBody.m; sourceTree = "<group>"; };
+		A7A946E11534D98E0025ED7A /* ESQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESQuery.h; sourceTree = "<group>"; };
+		A7A946E21534D98E0025ED7A /* ESQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESQuery.m; sourceTree = "<group>"; };
+		A7A946E31534D98E0025ED7A /* ESQueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESQueryString.h; sourceTree = "<group>"; };
+		A7A946E41534D98E0025ED7A /* ESQueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESQueryString.m; sourceTree = "<group>"; };
+		A7A946E61534D98E0025ED7A /* ESHit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESHit.h; sourceTree = "<group>"; };
+		A7A946E71534D98E0025ED7A /* ESHit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESHit.m; sourceTree = "<group>"; };
+		A7A946E81534D98E0025ED7A /* ESHitMetrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESHitMetrics.h; sourceTree = "<group>"; };
+		A7A946E91534D98E0025ED7A /* ESHitMetrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESHitMetrics.m; sourceTree = "<group>"; };
+		A7A946EA1534D98E0025ED7A /* ESResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESResponse.h; sourceTree = "<group>"; };
+		A7A946EB1534D98E0025ED7A /* ESResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESResponse.m; sourceTree = "<group>"; };
+		A7A946EC1534D98E0025ED7A /* ESShards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESShards.h; sourceTree = "<group>"; };
+		A7A946ED1534D98E0025ED7A /* ESShards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESShards.m; sourceTree = "<group>"; };
+		A7A946EE1534D98E0025ED7A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A7A946EF1534D98E0025ED7A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				A78F735915347F2900A6D93C /* RestKit.xcodeproj */,
-				A78F72D315347B2F00A6D93C /* ElasticSearchClient */,
+				A7A946D31534D98E0025ED7A /* ElasticSearchClient */,
 				A78F72CC15347B2E00A6D93C /* Frameworks */,
 				A78F72CA15347B2E00A6D93C /* Products */,
 			);
@@ -174,34 +175,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A78F72D315347B2F00A6D93C /* ElasticSearchClient */ = {
-			isa = PBXGroup;
-			children = (
-				A78F72DC15347B2F00A6D93C /* AppDelegate.h */,
-				A78F72DD15347B2F00A6D93C /* AppDelegate.m */,
-				A78F72DF15347B2F00A6D93C /* ViewController.h */,
-				A78F72E015347B2F00A6D93C /* ViewController.m */,
-				A78F72E215347B2F00A6D93C /* ViewController.xib */,
-				A78F7383153485CB00A6D93C /* request */,
-				A78F738D1534866E00A6D93C /* response */,
-				A78F72D415347B2F00A6D93C /* Supporting Files */,
-			);
-			name = ElasticSearchClient;
-			path = Example;
-			sourceTree = "<group>";
-		};
-		A78F72D415347B2F00A6D93C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A78F72D515347B2F00A6D93C /* ElasticSearchClient-Info.plist */,
-				A78F72D615347B2F00A6D93C /* InfoPlist.strings */,
-				A78F72D915347B2F00A6D93C /* main.m */,
-				A78F72DB15347B2F00A6D93C /* ElasticSearchClient-Prefix.pch */,
-				A7A946B71534CCAA0025ED7A /* config.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		A78F735A15347F2900A6D93C /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,32 +187,60 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A78F7383153485CB00A6D93C /* request */ = {
+		A7A946D31534D98E0025ED7A /* ElasticSearchClient */ = {
 			isa = PBXGroup;
 			children = (
-				A78F7384153485CB00A6D93C /* ESBody.h */,
-				A78F7385153485CB00A6D93C /* ESBody.m */,
-				A78F7386153485CB00A6D93C /* ESQuery.h */,
-				A78F7387153485CB00A6D93C /* ESQuery.m */,
-				A78F7388153485CB00A6D93C /* ESQueryString.h */,
-				A78F7389153485CB00A6D93C /* ESQueryString.m */,
+				A7A946D41534D98E0025ED7A /* AppDelegate.h */,
+				A7A946D51534D98E0025ED7A /* AppDelegate.m */,
+				A7A946EE1534D98E0025ED7A /* ViewController.h */,
+				A7A946EF1534D98E0025ED7A /* ViewController.m */,
+				A7A946DB1534D98E0025ED7A /* ViewController.xib */,
+				A7A946DE1534D98E0025ED7A /* request */,
+				A7A946E51534D98E0025ED7A /* response */,
+				A7A947061534DABF0025ED7A /* Supporting Files */,
+			);
+			path = ElasticSearchClient;
+			sourceTree = "<group>";
+		};
+		A7A946DE1534D98E0025ED7A /* request */ = {
+			isa = PBXGroup;
+			children = (
+				A7A946DF1534D98E0025ED7A /* ESBody.h */,
+				A7A946E01534D98E0025ED7A /* ESBody.m */,
+				A7A946E11534D98E0025ED7A /* ESQuery.h */,
+				A7A946E21534D98E0025ED7A /* ESQuery.m */,
+				A7A946E31534D98E0025ED7A /* ESQueryString.h */,
+				A7A946E41534D98E0025ED7A /* ESQueryString.m */,
 			);
 			path = request;
 			sourceTree = "<group>";
 		};
-		A78F738D1534866E00A6D93C /* response */ = {
+		A7A946E51534D98E0025ED7A /* response */ = {
 			isa = PBXGroup;
 			children = (
-				A78F738E153486BF00A6D93C /* ESResponse.h */,
-				A78F738F153486BF00A6D93C /* ESResponse.m */,
-				A78F7391153487FF00A6D93C /* ESShards.h */,
-				A78F7392153487FF00A6D93C /* ESShards.m */,
-				A78F73941534884900A6D93C /* ESHitMetrics.h */,
-				A78F73951534884900A6D93C /* ESHitMetrics.m */,
-				A78F7397153488C200A6D93C /* ESHit.h */,
-				A78F7398153488C200A6D93C /* ESHit.m */,
+				A7A946E61534D98E0025ED7A /* ESHit.h */,
+				A7A946E71534D98E0025ED7A /* ESHit.m */,
+				A7A946E81534D98E0025ED7A /* ESHitMetrics.h */,
+				A7A946E91534D98E0025ED7A /* ESHitMetrics.m */,
+				A7A946EA1534D98E0025ED7A /* ESResponse.h */,
+				A7A946EB1534D98E0025ED7A /* ESResponse.m */,
+				A7A946EC1534D98E0025ED7A /* ESShards.h */,
+				A7A946ED1534D98E0025ED7A /* ESShards.m */,
 			);
 			path = response;
+			sourceTree = "<group>";
+		};
+		A7A947061534DABF0025ED7A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7A946D61534D98E0025ED7A /* config.plist */,
+				A7A946D71534D98E0025ED7A /* ElasticSearchClient-Info.plist */,
+				A7A946D81534D98E0025ED7A /* ElasticSearchClient-Prefix.pch */,
+				A7A946D91534D98E0025ED7A /* InfoPlist.strings */,
+				A7A946DD1534D98E0025ED7A /* main.m */,
+			);
+			name = "Supporting Files";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +260,7 @@
 				A78F736F1534801200A6D93C /* PBXTargetDependency */,
 			);
 			name = ElasticSearchClient;
-			productName = Example;
+			productName = ElasticSearchClient;
 			productReference = A78F72C915347B2E00A6D93C /* ElasticSearchClient.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -337,9 +338,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A78F72D815347B2F00A6D93C /* InfoPlist.strings in Resources */,
-				A78F72E415347B2F00A6D93C /* ViewController.xib in Resources */,
-				A7A946B81534CCAA0025ED7A /* config.plist in Resources */,
+				A7A946F11534D98E0025ED7A /* config.plist in Resources */,
+				A7A946F21534D98E0025ED7A /* ElasticSearchClient-Info.plist in Resources */,
+				A7A946F31534D98E0025ED7A /* InfoPlist.strings in Resources */,
+				A7A946F41534D98E0025ED7A /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,16 +352,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A78F72DA15347B2F00A6D93C /* main.m in Sources */,
-				A78F72DE15347B2F00A6D93C /* AppDelegate.m in Sources */,
-				A78F72E115347B2F00A6D93C /* ViewController.m in Sources */,
-				A78F738A153485CB00A6D93C /* ESBody.m in Sources */,
-				A78F738B153485CB00A6D93C /* ESQuery.m in Sources */,
-				A78F738C153485CB00A6D93C /* ESQueryString.m in Sources */,
-				A78F7390153486BF00A6D93C /* ESResponse.m in Sources */,
-				A78F7393153487FF00A6D93C /* ESShards.m in Sources */,
-				A78F73961534884900A6D93C /* ESHitMetrics.m in Sources */,
-				A78F7399153488C200A6D93C /* ESHit.m in Sources */,
+				A7A946F01534D98E0025ED7A /* AppDelegate.m in Sources */,
+				A7A946F51534D98E0025ED7A /* main.m in Sources */,
+				A7A946F61534D98E0025ED7A /* ESBody.m in Sources */,
+				A7A946F71534D98E0025ED7A /* ESQuery.m in Sources */,
+				A7A946F81534D98E0025ED7A /* ESQueryString.m in Sources */,
+				A7A946F91534D98E0025ED7A /* ESHit.m in Sources */,
+				A7A946FA1534D98E0025ED7A /* ESHitMetrics.m in Sources */,
+				A7A946FB1534D98E0025ED7A /* ESResponse.m in Sources */,
+				A7A946FC1534D98E0025ED7A /* ESShards.m in Sources */,
+				A7A946FD1534D98E0025ED7A /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,18 +376,19 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A78F72D615347B2F00A6D93C /* InfoPlist.strings */ = {
+		A7A946D91534D98E0025ED7A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A78F72D715347B2F00A6D93C /* en */,
+				A7A946DA1534D98E0025ED7A /* en */,
 			);
 			name = InfoPlist.strings;
+			path = ElasticSearchClient;
 			sourceTree = "<group>";
 		};
-		A78F72E215347B2F00A6D93C /* ViewController.xib */ = {
+		A7A946DB1534D98E0025ED7A /* ViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A78F72E315347B2F00A6D93C /* en */,
+				A7A946DC1534D98E0025ED7A /* en */,
 			);
 			name = ViewController.xib;
 			sourceTree = "<group>";
@@ -442,9 +445,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Example/ElasticSearchClient-Prefix.pch";
+				GCC_PREFIX_HEADER = "ElasticSearchClient/ElasticSearchClient-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
-				INFOPLIST_FILE = "Example/ElasticSearchClient-Info.plist";
+				INFOPLIST_FILE = "ElasticSearchClient/ElasticSearchClient-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -458,9 +461,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Example/ElasticSearchClient-Prefix.pch";
+				GCC_PREFIX_HEADER = "ElasticSearchClient/ElasticSearchClient-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
-				INFOPLIST_FILE = "Example/ElasticSearchClient-Info.plist";
+				INFOPLIST_FILE = "ElasticSearchClient/ElasticSearchClient-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
