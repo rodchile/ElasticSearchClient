@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 Fermyon Inc. All rights reserved.
 //
 
+#import <RestKit/RestKit.h>
+
 @interface ESQueryString : NSObject
 
 @property (nonatomic, strong) NSString* query;

@@ -10,13 +10,38 @@
 
 #import "ViewController.h"
 
+#import <RestKit/RestKit.h>
+
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
 
+#pragma mark - Global Instance methods
+- (void) setupESClient
+{
+    RKLogConfigureByName("RestKit/Network*", RKLogLevelTrace);
+    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
+    
+    // Initialize RestKit
+    RKObjectManager *manager =
+    [RKObjectManager objectManagerWithBaseURL:
+     [NSURL URLWithString:@"http://107.21.233.125:9200"]];
+    
+    // Enable automatic network activity indicator management
+    manager.client.requestQueue.showsNetworkActivityIndicatorWhenBusy = YES;
+    
+    // Serialize to JSON on the wire
+    manager.serializationMIMEType = RKMIMETypeJSON;
+    
+    [RKObjectManager setSharedManager:manager];
+}
+
+#pragma mark - Application Lifecycle Methods
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self setupESClient];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RestKit/RestKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <RKObjectLoaderDelegate>
+
+- (void) runTests;
 
 @end
