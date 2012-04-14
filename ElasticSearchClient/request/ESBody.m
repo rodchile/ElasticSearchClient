@@ -10,13 +10,15 @@
 
 @implementation ESBody
 
-@synthesize fields, query;
+@synthesize from, size, fieldsToQueryFor, query;
 
 + (RKObjectMapping *) getObjectMapping
 {
     RKObjectMapping* objectMapping = [RKObjectMapping mappingForClass:[ESBody class]];
 
-    [objectMapping mapKeyPath:@"fields" toAttribute:@"fields"];
+    [objectMapping mapKeyPath:@"from"   toAttribute:@"from"];
+    [objectMapping mapKeyPath:@"size"   toAttribute:@"size"];
+    [objectMapping mapKeyPath:@"fields" toAttribute:@"fieldsToQueryFor"];
 
     [objectMapping mapKeyPath:@"query"
                toRelationship:@"query"

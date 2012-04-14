@@ -10,8 +10,10 @@
 
 @interface ESBody : NSObject
 
-@property (nonatomic, strong) NSArray* fields;
-@property (nonatomic, strong) ESQuery* query;
+@property (nonatomic, strong) NSNumber* from;
+@property (nonatomic, strong) NSNumber* size;
+@property (nonatomic, strong) NSArray*  fieldsToQueryFor;
+@property (nonatomic, strong) ESQuery*  query;
 
 + (RKObjectMapping *) getObjectMapping;
 
