@@ -10,11 +10,12 @@
 
 @implementation ESQueryString
 
-@synthesize query, useDisMax;
+@synthesize fieldsToQueryOn, query, useDisMax;
 
 + (RKObjectMapping *) getObjectMapping
 {
     RKObjectMapping* objectMapping = [RKObjectMapping mappingForClass:[ESQueryString class]];
+    [objectMapping mapKeyPath:@"fields"         toAttribute:@"fieldsToQueryOn"];
     [objectMapping mapKeyPath:@"query"          toAttribute:@"query"];
     [objectMapping mapKeyPath:@"use_dis_max"    toAttribute:@"useDisMax"];
     return objectMapping;

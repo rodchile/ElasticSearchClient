@@ -10,6 +10,7 @@
 
 @interface ESQueryString : NSObject
 
+@property (nonatomic, strong) NSArray*  fieldsToQueryOn;
 @property (nonatomic, strong) NSString* query;
 @property (nonatomic, strong) NSNumber* useDisMax;
 
