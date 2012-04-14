@@ -57,9 +57,12 @@
 - (void) runTests
 {
     ESBody *body = [[ESBody alloc] init];
-    body.fields = [NSArray arrayWithObjects:@"name", @"upc", nil];
+    body.from = [NSNumber numberWithInt:0];
+    body.size = [NSNumber numberWithInt:5];
+    body.fieldsToQueryFor = [NSArray arrayWithObjects:@"name", @"upc", nil];
     body.query = [[ESQuery alloc] init];
     body.query.queryString = [[ESQueryString alloc] init];
+    body.query.queryString.fieldsToQueryOn = [NSArray arrayWithObjects:@"name", nil];
     body.query.queryString.query = @"+camera +laptop";
     body.query.queryString.useDisMax = [NSNumber numberWithBool:true];
     
