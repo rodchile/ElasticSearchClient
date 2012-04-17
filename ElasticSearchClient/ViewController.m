@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "ESBody.h"
+#import "ESRequest.h"
 #import "ESResponse.h"
+#import "ESWrapper.h"
 
 @interface ViewController ()
 
@@ -18,8 +19,12 @@
 @synthesize protocol;
 @synthesize address;
 @synthesize port;
+@synthesize index;
 @synthesize request;
 @synthesize response;
+@synthesize testQueryStringButton;
+@synthesize testBoolWithQueryStringButton;
+@synthesize testBoolWithRangeQueryButton;
 
 - (void)viewDidLoad
 {
@@ -33,8 +38,7 @@
     self.protocol.text  = [plistData objectForKey:@"protocol"];
     self.address.text   = [plistData objectForKey:@"address"];
     self.port.text      = [plistData objectForKey:@"port"];
-
-    [self runTests];
+    self.index.text     = [plistData objectForKey:@"index"];
 }
 
 - (void)viewDidUnload
@@ -44,6 +48,9 @@
     [self setPort:nil];
     [self setRequest:nil];
     [self setResponse:nil];
+    [self setTestQueryStringButton:nil];
+    [self setTestBoolWithQueryStringButton:nil];
+    [self setTestBoolWithRangeQueryButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -54,24 +61,27 @@
 }
 
 #pragma mark - Instance Methods
-- (void) runTests
+- (IBAction) testQueryStringQuery : (id) sender
 {
-    ESBody *body = [[ESBody alloc] init];
+    ESRequest *body = [[ESRequest alloc] init];
     body.from = [NSNumber numberWithInt:0];
-    body.size = [NSNumber numberWithInt:5];
+    body.size = [NSNumber numberWithInt:2];
     body.fieldsToQueryFor = [NSArray arrayWithObjects:@"name", @"upc", nil];
     body.query = [[ESQuery alloc] init];
-    body.query.queryString = [[ESQueryString alloc] init];
-    body.query.queryString.fieldsToQueryOn = [NSArray arrayWithObjects:@"name", nil];
-    body.query.queryString.query = @"+camera +laptop";
-    body.query.queryString.useDisMax = [NSNumber numberWithBool:true];
-    
+
+    ESQueryString *queryString = [[ESQueryString alloc] init];
+    queryString.fieldsToQueryOn = [NSArray arrayWithObjects:@"name", nil];
+    queryString.query = @"+camera +laptop";
+    queryString.use_dis_max = [NSNumber numberWithBool:true];
+
+    body.query.query_string = queryString;
+
     // Map the root object inversely for serialization,
     // any nested objects will also get registered properly automagically!
     [
      [RKObjectManager sharedManager].mappingProvider
-     setSerializationMapping:[[ESBody getObjectMapping] inverseMapping]
-     forClass:[ESBody class]
+     setSerializationMapping:[[ESRequest getObjectMapping] inverseMapping]
+     forClass:[ESRequest class]
     ];
 
     // Map the root object which will be used for parsing the response
@@ -81,9 +91,91 @@
      forKeyPath:@""
     ];
 
-    // Query should always hit the /_search url
-    RKObjectRouter *router = [RKObjectManager sharedManager].router;
-    [router routeClass:[ESBody class] toResourcePath:@"/bbyopen_index/_search"];
+    [[RKObjectManager sharedManager] postObject:body
+                                     usingBlock:^ (RKObjectLoader *loader) {
+                                         loader.targetObject = nil;
+                                         loader.delegate = self;
+                                     }];
+}
+
+- (IBAction) testBoolQueryWithNestedQueryStringQuery : (id) sender
+{
+    ESRequest *body = [[ESRequest alloc] init];
+    body.from = [NSNumber numberWithInt:0];
+    body.size = [NSNumber numberWithInt:2];
+    body.fieldsToQueryFor = [NSArray arrayWithObjects:@"name", @"upc", nil];
+    body.query = [[ESQuery alloc] init];
+
+    ESQueryString *queryString = [[ESQueryString alloc] init];
+    queryString.fieldsToQueryOn = [NSArray arrayWithObjects:@"name", nil];
+    queryString.query = @"+camera +laptop";
+    queryString.use_dis_max = [NSNumber numberWithBool:true];
+
+    body.query.boolQuery = [[ESBoolQuery alloc] init];
+
+    ESWrapper *wrapper = [[ESWrapper alloc] init];
+    wrapper.query_string = queryString;
+
+    body.query.boolQuery.must = [NSArray arrayWithObjects:wrapper, nil];
+
+    // Map the root object inversely for serialization,
+    // any nested objects will also get registered properly automagically!
+    [
+     [RKObjectManager sharedManager].mappingProvider
+     setSerializationMapping:[[ESRequest getObjectMapping] inverseMapping]
+     forClass:[ESRequest class]
+    ];
+
+    // Map the root object which will be used for parsing the response
+    [
+     [RKObjectManager sharedManager].mappingProvider
+     setMapping:[ESResponse getObjectMapping]
+     forKeyPath:@""
+    ];
+
+    [[RKObjectManager sharedManager] postObject:body
+                                     usingBlock:^ (RKObjectLoader *loader) {
+                                         loader.targetObject = nil;
+                                         loader.delegate = self;
+                                     }];
+}
+
+- (IBAction) testBoolQueryWithNestedRangeQuery : (id) sender
+{
+    ESRequest *body = [[ESRequest alloc] init];
+    body.from = [NSNumber numberWithInt:0];
+    body.size = [NSNumber numberWithInt:2];
+    body.fieldsToQueryFor = [NSArray arrayWithObjects:@"name", @"upc", nil];
+    body.query = [[ESQuery alloc] init];
+
+    body.query.boolQuery = [[ESBoolQuery alloc] init];
+
+    ESRangeQuery *range = [[ESRangeQuery alloc] init];
+    range.key_field = @"salePrice";
+    range.from = [NSNumber numberWithInt:10];
+    range.to = [NSNumber numberWithInt:20];
+    range.include_lower = [NSNumber numberWithBool:true];
+    range.include_upper = [NSNumber numberWithBool:false];
+    range.boost = [NSNumber numberWithInt:2];
+
+    ESWrapper *wrapper = [[ESWrapper alloc] init];
+    wrapper.range = range;
+    body.query.boolQuery.must = [NSArray arrayWithObjects:wrapper, nil];
+
+    // Map the root object inversely for serialization,
+    // any nested objects will also get registered properly automagically!
+    [
+     [RKObjectManager sharedManager].mappingProvider
+     setSerializationMapping:[[ESRequest getObjectMapping] inverseMapping]
+     forClass:[ESRequest class]
+    ];
+
+    // Map the root object which will be used for parsing the response
+    [
+     [RKObjectManager sharedManager].mappingProvider
+     setMapping:[ESResponse getObjectMapping]
+     forKeyPath:@""
+    ];
 
     //[[RKObjectManager sharedManager] postObject:body delegate:self];
     [[RKObjectManager sharedManager] postObject:body

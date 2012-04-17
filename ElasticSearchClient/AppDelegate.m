@@ -7,10 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
 #import "ViewController.h"
-
 #import <RestKit/RestKit.h>
+
+#import "ESRequest.h"
 
 @implementation AppDelegate
 
@@ -31,10 +31,11 @@
     RKObjectManager *manager =
     [RKObjectManager objectManagerWithBaseURL:
      [
-      NSURL URLWithString:[NSString stringWithFormat:@"%@://%@:%@",
+      NSURL URLWithString:[NSString stringWithFormat:@"%@://%@:%@/%@",
                            [plistData objectForKey:@"protocol"],
                            [plistData objectForKey:@"address"],
-                           [plistData objectForKey:@"port"]]
+                           [plistData objectForKey:@"port"],
+                           [plistData objectForKey:@"index"]]
      ]
     ];
 
@@ -44,7 +45,12 @@
     // Serialize to JSON on the wire
     manager.serializationMIMEType = RKMIMETypeJSON;
 
+    // Set the shared manager
     [RKObjectManager setSharedManager:manager];
+
+    // Query should always hit the /_search url
+    RKObjectRouter *router = [RKObjectManager sharedManager].router;
+    [router routeClass:[ESRequest class] toResourcePath:@"/_search"];
 }
 
 #pragma mark - Application Lifecycle Methods
