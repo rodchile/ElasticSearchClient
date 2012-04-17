@@ -1,13 +1,22 @@
 //
-//  ESRangeElement.h
+//  ESRangeQuery.h
 //  ElasticSearchClient
 //
 //  Created by Pulkit Singhal on 4/16/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <RestKit/RestKit.h>
 
-@interface ESRangeElement : NSObject
+@interface ESRangeQuery : NSObject
+
+@property (nonatomic, strong) NSString* key_field;
+@property (nonatomic, strong) NSNumber* from;
+@property (nonatomic, strong) NSNumber* to;
+@property (nonatomic, strong) NSNumber* include_lower;
+@property (nonatomic, strong) NSNumber* include_upper;
+@property (nonatomic, strong) NSNumber* boost;
+
++ (RKObjectMapping*) getObjectMapping;
 
 @end
