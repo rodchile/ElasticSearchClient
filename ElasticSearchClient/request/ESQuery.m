@@ -1,5 +1,5 @@
 //
-//  Query.m
+//  ESQuery.m
 //  ShoppinPal
 //
 //  Created by Pulkit Singhal on 4/7/12.
@@ -10,15 +10,19 @@
 
 @implementation ESQuery
 
-@synthesize queryString;
+@synthesize query_string, boolQuery;
 
 + (RKObjectMapping *) getObjectMapping
 {
     RKObjectMapping* objectMapping = [RKObjectMapping mappingForClass:[ESQuery class]];
 
     [objectMapping mapKeyPath:@"query_string"
-               toRelationship:@"queryString"
+               toRelationship:@"query_string"
                   withMapping:[ESQueryString getObjectMapping]];
+
+    [objectMapping mapKeyPath:@"bool"
+               toRelationship:@"boolQuery"
+                  withMapping:[ESBoolQuery getObjectMapping]];
 
     return objectMapping;
 }

@@ -1,5 +1,5 @@
 //
-//  Query.h
+//  ESQuery.h
 //  ShoppinPal
 //
 //  Created by Pulkit Singhal on 4/7/12.
@@ -7,10 +7,12 @@
 //
 
 #import "ESQueryString.h"
+#import "ESBoolQuery.h"
 
 @interface ESQuery : NSObject
 
-@property (nonatomic, strong) ESQueryString* queryString;
+@property (nonatomic, strong) ESQueryString* query_string;
+@property (nonatomic, strong) ESBoolQuery* boolQuery;
 
 + (RKObjectMapping*) getObjectMapping;
 

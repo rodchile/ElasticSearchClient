@@ -1,5 +1,5 @@
 //
-//  QueryString.h
+//  ESQueryString.h
 //  ShoppinPal
 //
 //  Created by Pulkit Singhal on 4/7/12.
@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSArray*  fieldsToQueryOn;
 @property (nonatomic, strong) NSString* query;
-@property (nonatomic, strong) NSNumber* useDisMax;
+@property (nonatomic, strong) NSNumber* use_dis_max;
 
 + (RKObjectMapping*) getObjectMapping;
 
