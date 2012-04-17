@@ -1,5 +1,5 @@
 //
-//  ESBody.h
+//  ESRequest.h
 //  ShoppinPal
 //
 //  Created by Pulkit Singhal on 4/9/12.
@@ -8,7 +8,7 @@
 
 #import "ESQuery.h"
 
-@interface ESBody : NSObject
+@interface ESRequest : NSObject
 
 @property (nonatomic, strong) NSNumber* from;
 @property (nonatomic, strong) NSNumber* size;

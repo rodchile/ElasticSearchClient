@@ -1,20 +1,20 @@
 //
-//  ESBody.m
+//  ESRequest.m
 //  ShoppinPal
 //
 //  Created by Pulkit Singhal on 4/9/12.
 //  Copyright (c) 2012 Fermyon Inc. All rights reserved.
 //
 
-#import "ESBody.h"
+#import "ESRequest.h"
 
-@implementation ESBody
+@implementation ESRequest
 
 @synthesize from, size, fieldsToQueryFor, query;
 
 + (RKObjectMapping *) getObjectMapping
 {
-    RKObjectMapping* objectMapping = [RKObjectMapping mappingForClass:[ESBody class]];
+    RKObjectMapping* objectMapping = [RKObjectMapping mappingForClass:[ESRequest class]];
 
     [objectMapping mapKeyPath:@"from"   toAttribute:@"from"];
     [objectMapping mapKeyPath:@"size"   toAttribute:@"size"];
