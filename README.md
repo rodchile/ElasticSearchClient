@@ -13,6 +13,8 @@ You must add `ElasticSearchClient/config.plist` in order to use the project out-
         <string>123.456.789.101</string>
         <key>port</key>
         <string>9200</string>
+        <key>index</key>
+        <string>index_name</string>
 </dict>
 </plist>
 ```
