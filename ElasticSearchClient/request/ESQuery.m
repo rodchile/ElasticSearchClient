@@ -10,7 +10,7 @@
 
 @implementation ESQuery
 
-@synthesize query_string, boolQuery;
+@synthesize query_string, boolQuery, rangeQuery;
 
 + (RKObjectMapping *) getObjectMapping
 {
@@ -23,6 +23,10 @@
     [objectMapping mapKeyPath:@"bool"
                toRelationship:@"boolQuery"
                   withMapping:[ESBoolQuery getObjectMapping]];
+
+    [objectMapping mapKeyPath:@"range"
+               toRelationship:@"rangeQuery"
+                  withMapping:[ESRangeQuery getObjectMapping]];
 
     return objectMapping;
 }

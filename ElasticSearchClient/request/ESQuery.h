@@ -8,11 +8,13 @@
 
 #import "ESQueryString.h"
 #import "ESBoolQuery.h"
+#import "ESRangeQuery.h"
 
 @interface ESQuery : NSObject
 
 @property (nonatomic, strong) ESQueryString* query_string;
 @property (nonatomic, strong) ESBoolQuery* boolQuery;
+@property (nonatomic, strong) ESRangeQuery* rangeQuery;
 
 + (RKObjectMapping*) getObjectMapping;
 

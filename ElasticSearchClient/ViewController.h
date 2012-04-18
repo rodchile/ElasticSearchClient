@@ -19,11 +19,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *request;
 @property (weak, nonatomic) IBOutlet UITextView *response;
 
-@property (weak, nonatomic) IBOutlet UIButton *testQueryStringButton;
-@property (weak, nonatomic) IBOutlet UIButton *testBoolWithQueryStringButton;
-@property (weak, nonatomic) IBOutlet UIButton *testBoolWithRangeQueryButton;
-
 - (IBAction) testQueryStringQuery : (id) sender;
+- (IBAction) testRangeQuery : (id) sender;
 - (IBAction) testBoolQueryWithNestedQueryStringQuery : (id) sender;
 - (IBAction) testBoolQueryWithNestedRangeQuery : (id) sender;
 
